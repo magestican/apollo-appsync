@@ -1,0 +1,86 @@
+{
+  "name": "apollo-appsync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@babel/cli": "7.0.0-beta.54",
+    "@babel/core": "7.0.0-beta.54",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.54",
+    "@babel/plugin-proposal-decorators": "7.0.0-beta.54",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.54",
+    "@babel/preset-env": "7.0.0-beta.54",
+    "@babel/preset-react": "7.0.0-beta.54",
+    "@babel/preset-stage-2": "^7.0.0-beta.54",
+    "apollo-cache-inmemory": "1.2.5",
+    "apollo-client": "2.3.5",
+    "apollo-link-http": "1.5.4",
+    "babel-loader": "8.0.0-beta.4",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
+    "babel-preset-react": "6.24.1",
+    "cross-env": "5.2.0",
+    "graphql": "0.13.2",
+    "graphql-tag": "2.9.2",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "16.4.1",
+    "react-apollo": "2.1.9",
+    "react-dom": "^16.4.1",
+    "webpack": "4.16.1",
+    "webpack-cli": "3.0.8",
+    "webpack-dev-server": "3.1.4"
+  },
+  "devDependencies": {
+    "chalk": "2.4.1",
+    "express": "4.16.3",
+    "ip": "1.1.5",
+    "minimist": "1.2.0",
+    "ngrok": "3.0.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "last 4 versions"
+            ]
+          }
+        }
+      ],
+      "@babel/react",
+      [
+        "@babel/preset-stage-2",
+        {
+          "decoratorsLegacy": true
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-proposal-class-properties",
+      "syntax-dynamic-import",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server  --mode development --watch  --https",
+    "build": "webpack --env.prod --mode=production --env.min",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magestican/apollo-appsync.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magestican/apollo-appsync/issues"
+  },
+  "homepage": "https://github.com/magestican/apollo-appsync#readme"
+}
